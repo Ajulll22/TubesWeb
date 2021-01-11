@@ -68,7 +68,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Username <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="Profil">Edit Profil</a></li>
-                        <li><a href="Login">Log Out</a></li>
+                        <li><a href="/Login/logout">Log Out</a></li>
                     </ul>
                 </li>
             </ul>
