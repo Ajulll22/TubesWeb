@@ -44,7 +44,7 @@ class Login extends Controller
                 'logged_in'     => TRUE
             ];
             $session->set($ses_data);
-            return redirect()->to('/dashboard');
+            return redirect()->to('/Admin');
         }else{
             $session->setFlashdata('msg', 'Email not Found');
             return redirect()->to('/login');

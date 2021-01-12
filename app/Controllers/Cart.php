@@ -20,6 +20,8 @@ class Cart extends BaseController
  
     public function index()
     {
+        $who = session();
+        $data['user'] = $who->get();
 		// membuat variabel untuk menampung total keranjang belanja
 		$session = session('cart');
 

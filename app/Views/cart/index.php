@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Kimi Themes</title>
+<title>Checkout</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -45,28 +45,18 @@
         </div>
         <div class="clearfix"></div>
 
-        <div class="fly-searchbar" style="display: none;">
-            <div class="top-nav-searchbar searchbar-mobile">
-                <div class="input-group">
-                    <form action="search.html">
-                        <input class="form-control" type="text" name="q" id="tipue_search_input" placeholder="Search for" autofocus="autofocus">
-                    </form>
-                    <button class="pull-right" id="buttonCloseSearchbarMobile"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </div>
-            </div>
-        </div>
+
 
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/Dashboard">Dashboard</a></li>
                 <li class="active"><a href="/Home">Shop</a></li>
-                <li><a href="/About">About</a></li>
+                <li><a href="/Pesanan">Pesanan</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Username <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $user['user_email']; ?> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/Profil">Edit Profil</a></li>
-                        <li><a href="/Login">Log Out</a></li>
+                        <li><a href="/Login/logout">Log Out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -105,7 +95,6 @@
         </div>
     </div>
 </nav>
-
 
 
 

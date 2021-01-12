@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Kimi Themes</title>
+<title>Checkout</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -52,11 +52,10 @@
             <ul class="nav navbar-nav">
                 <li><a href="/Dashboard">Dashboard</a></li>
                 <li class="active"><a href="/Home">Shop</a></li>
-                <li><a href="/About">About</a></li>
+                <li><a href="/Pesanan">Pesanan</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $user['user_email']; ?> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/Profil">Edit Profil</a></li>
                         <li><a href="/Login/logout">Log Out</a></li>
                     </ul>
                 </li>
@@ -369,6 +368,11 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<script type = "text/javascript" >
+function preventBack(){window.history.forward();}
+setTimeout("preventBack()", 0);
+window.onunload=function(){null};
+</script>
 <script src="assets/js/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="assets/js/bootstrap.min.js"></script>

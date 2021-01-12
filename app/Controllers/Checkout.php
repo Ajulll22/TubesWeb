@@ -38,9 +38,10 @@ class Checkout extends BaseController
 
 	public function store()
     {
-
+        $session = session();
 		$jumlah = $this->cart->count_totals();
     // Mengambil value dari form dengan method POST
+    $user = $session->get('user_id');
     $nama = $this->request->getPost('order_nama');
 	$email = $this->request->getPost('order_email');
 	$barang = $this->request->getPost('barang');
@@ -54,7 +55,8 @@ class Checkout extends BaseController
  
     // Membuat array collection yang disiapkan untuk insert ke table
     $order = [
-        'order_nama' => $nama,
+        'user_id' => $user,
+        'order_name' => $nama,
         'order_email' => $email,
         'barang' => $barang,
 		'total' => $total,
@@ -70,7 +72,7 @@ class Checkout extends BaseController
     Membuat variabel simpan yang isinya merupakan memanggil function 
     insert_product dan membawa parameter data 
     */
-    $simpan = $this->order->insert_product($order);
+    $simpan = $this->order->insert_order($order);
  
     // Jika simpan berhasil, maka ...
     if($simpan)

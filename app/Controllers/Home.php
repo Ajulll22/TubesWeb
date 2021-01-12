@@ -21,6 +21,8 @@ class Home extends Controller
 
     public function index()
     {
+        $who = session();
+		$data['user'] = $who->get();
         $model = new ProductModel();
         $session = session('cart');
         $data['items'] = $this->cart->totals();
@@ -32,6 +34,8 @@ class Home extends Controller
 
     public function Fashion()
     {
+        $who = session();
+		$data['user'] = $who->get();
         $model = new ProductModel();
         $session = session('cart');
         $data['items'] = $this->cart->totals();
@@ -43,6 +47,8 @@ class Home extends Controller
 
     public function Food()
     {
+        $who = session();
+		$data['user'] = $who->get();
         $model = new ProductModel();
         $session = session('cart');
         $data['items'] = $this->cart->totals();
@@ -54,6 +60,8 @@ class Home extends Controller
 
     public function Otomotif()
     {
+        $who = session();
+		$data['user'] = $who->get();
         $model = new ProductModel();
         $session = session('cart');
         $data['items'] = $this->cart->totals();
@@ -65,6 +73,8 @@ class Home extends Controller
 
     public function Gadget()
     {
+        $who = session();
+		$data['user'] = $who->get();
         $model = new ProductModel();
         $session = session('cart');
         $data['items'] = $this->cart->totals();
@@ -76,6 +86,8 @@ class Home extends Controller
 
     public function Makeup()
     {
+        $who = session();
+		$data['user'] = $who->get();
         $model = new ProductModel();
         $session = session('cart');
         $data['items'] = $this->cart->totals();
@@ -87,6 +99,8 @@ class Home extends Controller
 
     public function Kitchen()
     {
+        $who = session();
+		$data['user'] = $who->get();
         $model = new ProductModel();
         $session = session('cart');
         $data['items'] = $this->cart->totals();
@@ -98,6 +112,8 @@ class Home extends Controller
 
     public function Decoration()
     {
+        $who = session();
+		$data['user'] = $who->get();
         $model = new ProductModel();
         $session = session('cart');
         $data['items'] = $this->cart->totals();
