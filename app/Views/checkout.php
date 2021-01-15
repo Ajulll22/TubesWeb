@@ -4,18 +4,18 @@
 <title>Checkout</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/kimi.css" rel="stylesheet">
-    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/assets/css/kimi.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/assets/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- owl carousel -->
-    <link rel="stylesheet" href="/assets/css/owl_carousel/owl.carousel.css">
-    <link rel="stylesheet" href="/assets/css/owl_carousel/owl.theme.default.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/owl_carousel/owl.carousel.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/owl_carousel/owl.theme.default.css">
 
     <!--tipue search-->
-    <link rel="stylesheet" href="/assets/css/tipuesearch/tipuesearch.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/tipuesearch/tipuesearch.css">
 
-    <link rel="stylesheet" href="/assets/css/prism/prism.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/prism/prism.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid hidden-xs">
         <div class="row">
-                <p class="text-center logo-container"><a href="/Dashboard"><img src="/assets/images/logo/logo.png" width="45"></a></p>
+                <p class="text-center logo-container"><a href="<?php echo base_url() ?>/Dashboard"><img src="/assets/images/logo/logo.png" width="45"></a></p>
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
             </button>
         </div>
         <div class="visible-xs logo-center">
-            <p class="text-center logo-container visible-xs"><a href="/index.html"><img src="/assets/images/logo.png" width="90"></a></p>
+            <p class="text-center logo-container visible-xs"><a href="<?php echo base_url() ?>/Dashboard"><img src="/assets/images/logo.png" width="90"></a></p>
         </div>
         <div class="visible-xs pull-right">
             <button class="pull-left search-button-mobile" id="buttonOpenSearchbarMobile"><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -50,13 +50,13 @@
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/Dashboard">Dashboard</a></li>
-                <li class="active"><a href="/Home">Shop</a></li>
-                <li><a href="/Pesanan">Pesanan</a></li>
+                <li><a href="<?php echo base_url() ?>/Dashboard">Dashboard</a></li>
+                <li class="active"><a href="<?php echo base_url() ?>/Home">Shop</a></li>
+                <li><a href="<?php echo base_url() ?>/Pesanan">Pesanan</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $user['user_email']; ?> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/Login/logout">Log Out</a></li>
+                        <li><a href="<?php echo base_url() ?>/Login/logout">Log Out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -85,7 +85,7 @@
                                 <div class="row">
                                     <div class="col-sm-6 col-xs-6 less-padding"><h4><small>Total</small><br><span>Rp. <?php echo number_format($jumlah, 0, 0, '.'); ?></span></h4></div>
                                     <div class="col-sm-6 col-xs-6 less-padding">
-                                <a href="/Cart" class="button-green-top-nav btn pull-right btn-block text-oswald text-uppercase">View Cart</a>
+                                <a href="<?php echo base_url() ?>/Cart" class="button-green-top-nav btn pull-right btn-block text-oswald text-uppercase">View Cart</a>
                             </div>
                         </div>
 
@@ -305,7 +305,7 @@
                     </div>
                 </div>
 
-                <a href="Cart" class="text-gray-1"><i class="fa fa-angle-left" aria-hidden="true"></i>Cart</a>
+                <a href="<?php echo base_url() ?>/Cart" class="text-gray-1"><i class="fa fa-angle-left" aria-hidden="true"></i>Cart</a>
                 <button type="submit" class="btn btn-default pull-right button-black hidden-xs">Complete Order</button>
                 <div class="clearfix maya-small-padding"></div>
             </form>

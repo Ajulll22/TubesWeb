@@ -1,5 +1,5 @@
 <header>
-<link rel="stylesheet" href="assets/css/bootstrap.min.v4.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/bootstrap.min.v4.css">
 <title>Login</title>
 </header>
 <body>
@@ -31,14 +31,14 @@
                 <div>
                 <h5 class="text-center">OR</h5>
                 </div>
-                <a href="Register" class="text-center">Register A New Account</a>
+                <a href="<?php echo base_url() ?>/Register" class="text-center">Register A New Account</a>
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="assets/js/jquery.js"></script> 
-    <script src="assets/js/popper.js"></script> 
-    <script src="assets/js/bootstrap.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/jquery.js"></script> 
+    <script src="<?php echo base_url() ?>assets/js/popper.js"></script> 
+    <script src="<?php echo base_url() ?>assets/js/bootstrap.js"></script>
 </body>

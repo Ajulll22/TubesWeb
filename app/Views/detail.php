@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Dashboard</title>
+<title>Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url() ?>/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -50,8 +50,8 @@
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="<?php echo base_url() ?>/Dashboard">Dashboard</a></li>
-                <li ><a href="<?php echo base_url() ?>/Home">Shop</a></li>
+                <li><a href="<?php echo base_url() ?>/Dashboard">Dashboard</a></li>
+                <li class="active"><a href="<?php echo base_url() ?>/Home">Shop</a></li>
                 <li><a href="<?php echo base_url() ?>/Pesanan">Pesanan</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $user['user_email']; ?> <span class="caret"></span></a>
@@ -97,39 +97,84 @@
 </nav>
 
 
-<div class="container-fluid kimi-container less-padding">
-    <div class="homepage-slider owl-carousel owl-theme">
-        <div class="item">
-            <div class="scrim"></div>
-            <h2 class="heading-large">Good Food is All the Sweeter When Shared with Good Friends</h2>
-            <div class="row-buttons">
-                <a href="<?php echo base_url() ?>/Home" class="btn button-outline text-white">Belanja Sekarang</a>
+
+
+<div class="container">
+
+    <div class="kimi-container">
+
+
+<div class="container" style="background: white; padding-bottom: 50px;">
+    <div class="col-md-6">
+        <!--carousel-->
+        <div id="main_area">
+            <!-- Slider -->
+            <div class="row" style="margin-top: 25px;">
+
+                <div class="col-sm-9 less-padding">
+                    <div class="col-xs-12 less-padding" id="slider">
+                        <!-- Top part of the slider -->
+                        <div class="row">
+                            <div class="col-sm-12" id="carousel-bounding-box">
+                                <div class="carousel slide" id="myCarousel">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item" data-slide-number="0">
+                                            <img src="<?php echo base_url('upload/product/'.$product['product_img']) ?>">
+                                        </div>
+
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/Slider-->
+
+
             </div>
-            <img src="<?php echo base_url() ?>/assets/images/slider1.jpg" width="100%">
+
         </div>
-        <div class="item">
-            <div class="scrim"></div>
-            <h2 class="heading-large">Refresh Your Day, Refresh Your Mood, Refresh with this Delicious Meal</h2>
-            <div class="row-buttons">
-                <a href="<?php echo base_url() ?>/Home" class="btn button-outline text-white">Belanja Sekarang</a>
+        <!--carousel ends-->
+    </div>
+
+    <div class="col-md-6" style="position: relative;">
+        <h1><?php echo $product['product_name']; ?></h1>
+
+        <div class="row">
+            <div class="col-md-10">
             </div>
-            <img src="<?php echo base_url() ?>/assets/images/slider2.jpg" width="100%">
         </div>
-        <div class="item">
-            <div class="scrim"></div>
-            <h2 class="heading-large">Refresh Your Day, Refresh Your Mood, Refresh with this Delicious Meal</h2>
-            <div class="row-buttons">
-                <a href="<?php echo base_url() ?>/Home" class="btn button-outline text-white">Belanja Sekarang</a>
+
+
+        <p class="product-description"><?php echo $product['product_description']; ?></p>
+
+
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Rp. <?php echo $product['product_price']; ?></h3>
             </div>
-            <img src="<?php echo base_url() ?>/assets/images/slider3.jpg" width="100%">
         </div>
+
+        <div class="product-detail-action-button-container">
+            <button onclick="location.href='<?php echo base_url('cart/beli/'.$product['product_id']); ?>'" class="btn button-add-to-bag" style="margin-right: 10px;">Add to Cart</button>
+            <button class="btn btn-default button-black button-learn-more" id="deleteBookmarkButton" style="display: none;">Delete Favourite</button>
+        </div>
+
+
     </div>
 </div>
 
-
-
-<!--include footer-->
-<div class="include-footer"></div>
 
 
 <script src="<?php echo base_url() ?>/assets/js/jquery.min.js"></script>

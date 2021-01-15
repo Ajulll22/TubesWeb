@@ -122,4 +122,32 @@ class Home extends Controller
         $data['product']  = $model->getDecoration()->getResult();
         return view('home', $data);
     }
+
+    public function Music()
+    {
+        $who = session();
+		$data['user'] = $who->get();
+        $model = new ProductModel();
+        $session = session('cart');
+        $data['items'] = $this->cart->totals();
+        $data['jumlah'] = $this->cart->count_totals();
+        $data['total'] = is_array($session)? array_values($session): array();
+        $data['product']  = $model->getMusic()->getResult();
+        return view('home', $data);
+    }
+
+    public function Detail($id)
+    {
+        $who = session();
+		$data['user'] = $who->get();
+        $model = new ProductModel();
+        $session = session('cart');
+        $data['items'] = $this->cart->totals();
+        $data['jumlah'] = $this->cart->count_totals();
+        $data['total'] = is_array($session)? array_values($session): array();
+        $data['product']  = $this->product->getProduct($id);
+        return view('/detail', $data);
+    }
+
+
 }

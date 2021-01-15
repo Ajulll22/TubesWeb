@@ -38,6 +38,8 @@ $routes->get('/Cart', 'Cart::index',['filter' => 'auth']);
 $routes->get('/Checkout', 'Checkout::index',['filter' => 'auth']);
 $routes->get('/Thanks', 'Thanks::index',['filter' => 'auth']);
 $routes->get('/Admin', 'Admin::index',['filter' => 'admin']);
+$routes->get('/admin', 'Admin::index',['filter' => 'admin']);
+
 
 
 /**

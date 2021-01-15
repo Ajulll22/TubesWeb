@@ -9,6 +9,7 @@ class Login extends Controller
     {
         helper(['form']);
         echo view('login');
+        
     } 
  
     public function auth()
@@ -29,11 +30,11 @@ class Login extends Controller
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/dashboard');
+                return redirect()->to(base_url('/Dashboard')); 
             }
             else{
                 $session->setFlashdata('msg', 'Wrong Password');
-                return redirect()->to('/login');
+                return redirect()->to(base_url('/login')); 
             }
         }
         if ($email == "test@admin.com" and $password == "test"){
@@ -44,10 +45,10 @@ class Login extends Controller
                 'logged_in'     => TRUE
             ];
             $session->set($ses_data);
-            return redirect()->to('/Admin');
+            return redirect()->to(base_url('/Admin'));
         }else{
             $session->setFlashdata('msg', 'Email not Found');
-            return redirect()->to('/login');
+            return redirect()->to(base_url('/login'));
         }
     }
  
@@ -55,6 +56,6 @@ class Login extends Controller
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/login');
+        return redirect()->to(base_url('/login'));
     }
 } 

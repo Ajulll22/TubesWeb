@@ -33,10 +33,10 @@ class Register extends Controller
                 'user_password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
             $model->save($data);
-            return redirect()->to('/login');
+            return redirect()->to(base_url('/Login'));
         }else{
             $data['validation'] = $this->validator;
-            return redirect()->to('/register');
+            return redirect()->to(base_url('/Register'));
         }
          
     }

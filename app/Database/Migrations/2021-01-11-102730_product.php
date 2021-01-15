@@ -10,7 +10,6 @@ class Product extends Migration
 			'product_id'          => [
 					'type'           => 'INT',
 					'constraint'     => 11,
-					'unsigned'       => TRUE,
 					'auto_increment' => TRUE
 			],
 			'product_name'       => [

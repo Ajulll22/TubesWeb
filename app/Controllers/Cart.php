@@ -58,7 +58,7 @@ class Cart extends BaseController
             // error flashdata
             session()->setFlashdata('error', "Tidak dapat menemukan data product");
         }
-        return redirect()->to('/Home');
+        return redirect()->to(base_url('/Home'));
     }
  
     // function untuk update cart berdasarkan id dan quantity
@@ -66,7 +66,7 @@ class Cart extends BaseController
     {
         // update cart
         $this->cart->update();
-        return redirect()->to('/cart');
+        return redirect()->to(base_url('/cart'));
     }
  
     // function untuk menghapus cart berdasarkan id
@@ -85,7 +85,7 @@ class Cart extends BaseController
             // error flashdata
             session()->setFlashdata('error', "Tidak dapat menemukan data product");
         }
-        return redirect()->to('/cart');
+        return redirect()->to(base_url('/cart'));
     }
  
 }
